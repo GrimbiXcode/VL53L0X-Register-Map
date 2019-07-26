@@ -9,22 +9,14 @@ Then feel free to contribute this knowledge here in the form of a commit or issu
 
 | Register Name | Address | Description |
 |----|----|----|
-| SYSRANGE_MODE_START_STOP |    0x01 | `1`: <br> **continuous mode**: toggle state <br> **singleshot mode**: arm next shot |
-| SYSRANGE_MODE_SINGLESHOT |    0x00 | `0`: single shot mode |
-| SYSRANGE_MODE_BACKTOBACK |    0x02 | `1`: back-to-back operation mode |
-| SYSRANGE_MODE_TIMED |         0x04 | `1`: timed operation mode |
-| SYSRANGE_MODE_HISTOGRAM |     0x08 | `1`: histogram operation mode |
+| SYSRANGE_START | 0x00 | `0x00`: `0`: single shot mode<br>`0x01`: `1`: <br>&nbsp;&nbsp;&nbsp;&nbsp;*@continuous mode*: toggle state <br>&nbsp;&nbsp;&nbsp;&nbsp;*@singleshot mode*: arm next shot<br>`0x02`: `1`: back-to-back operation mode<br>`0x04`: timed operation mode<br>`0x08`: histogram operation mode |
 | SYSTEM_THRESH_HIGH |  0x0C |  |
 | SYSTEM_THRESH_LOW |  0x0E |  |
 | SYSTEM_SEQUENCE_CONFIG |  0x01 |  |
 | SYSTEM_RANGE_CONFIG |  0x09 |  |
 | SYSTEM_INTERMEASUREMENT_PERIOD |  0x04 |  |
-| SYSTEM_INTERRUPT_CONFIG_GPIO |  0x0A |  |
-| SYSTEM_INTERRUPT_GPIO_DISABLED |  0x |  |
-| SYSTEM_INTERRUPT_GPIO_LEVEL_LOW | 0x01 |  |
-| SYSTEM_INTERRUPT_GPIO_LEVEL_HIGH |    0x02 |  |
-| SYSTEM_INTERRUPT_GPIO_OUT_OF_WINDOW | 0x03 |  |
-| SYSTEM_INTERRUPT_GPIO_NEW_SAMPLE_READY |  0x04 |  |
+| **GPIO config** |
+| SYSTEM_INTERRUPT_GPIO_CONFIG |  0x0A | `0x00`: Disabled<br>`0x01`: Low level<br>`0x02`: High level<br>`0x03`: Out of window<br>`0x04`: New sample ready |
 | GPIO_HV_MUX_ACTIVE_HIGH |          0x84 |  |
 | SYSTEM_INTERRUPT_CLEAR |           0x0B |  |
 | I2C_SLAVE_DEVICE_ADDRESS |  0x8a |  |
